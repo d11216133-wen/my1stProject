@@ -41,10 +41,7 @@ def main():
                 
         except ValueError:
             print("請輸入有效的數字！")
-        except EOFError:
-            print(f"\n遊戲結束！正確答案是 {secret_number}。你總共猜了 {attempts} 次。")
-            break
-        except KeyboardInterrupt:
+        except (EOFError, KeyboardInterrupt):
             print(f"\n遊戲結束！正確答案是 {secret_number}。你總共猜了 {attempts} 次。")
             break
 
